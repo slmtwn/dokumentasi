@@ -12,5 +12,70 @@ Pada saat ini yang sudah bekerjasama dengan Pemerintah Kab. Gunungkidul adalah:
 ### Inquiry (mengambil data tagihan)
 
 ```
-<URL-WebService>pajak_daerah/getesptpd/<auth_id>/?user = <user>&idbilling = <idbilling>
+{{base_url}}/pajak_daerah/getesptpd/<auth_id>/?user = <user>&idbilling = <idbilling>
+```
+
+Akan menghasilkan respon (respon berbentuk JSON)
+* auth_id salah
+
+  
+```json
+{
+    "status": "1",
+    "pesan": "Kode Keamanan salah"
+}
+```
+
+* Id Billing Belum terbayar
+
+```JSON
+{
+    "status": "0",
+    "pesan": "Sukses",
+    "data": [
+        {
+            "<DATA TAGIHAN>"
+        }
+    ]
+}
+```
+* Id Billing sudah terbayar
+
+  ```JSON
+  {
+    "status": "2",
+    "pesan": "Tagihan sudah Lunas",
+  }
+  ```
+### POSTED (melunaskan data tagihan)
+
+```
+{{base_url}}/pajak_daerah/postesptpd/<auth_id>/
+```
+Menggunakan method pos dan input JSON
+
+```json
+{
+    "user":"<username>",
+    "IDBILLING":"<idbilling>",
+    "NORESI":"<noresi>",
+    "PEMBAYARAN":<pokok+denda>
+}
+```
+akan menghasilkan output sebagai berikut ini
+
+* auth_id Salah
+  
+```json
+{
+    "status": "1",
+    "pesan": "Kode Keamanan salah"
+}
+```
+* Pembayaran berhasil
+```json
+{
+    "status": "0",
+    "pesan": "Pembayaran Sukses",
+}
 ```
