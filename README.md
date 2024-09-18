@@ -52,7 +52,7 @@ Akan menghasilkan respon (respon berbentuk JSON)
   ```JSON
   {
     "status": "1"
-    "pesam": "Data tidak ditemukan",
+    "pesan": "Data tidak ditemukan",
   }
   ```
 ### POSTED (melunaskan data tagihan)
