@@ -12,7 +12,7 @@ Pada saat ini yang sudah bekerjasama dengan Pemerintah Kab. Gunungkidul adalah:
 ### Inquiry (mengambil data tagihan)
 
 ```
-{{base_url}}/pajak_daerah/getesptpd/<auth_id>/?user = <user>&idbilling = <idbilling>
+{{base_url}}/pajak_daerah/getesptpd/{{auth_id}}/?user = {{user}}&idbilling = {{idbilling}}
 ```
 
 Akan menghasilkan respon (respon berbentuk JSON)
@@ -34,7 +34,7 @@ Akan menghasilkan respon (respon berbentuk JSON)
     "pesan": "Sukses",
     "data": [
         {
-            "<DATA TAGIHAN>"
+            "{{ data tagihan}}"
         }
     ]
 }
@@ -50,16 +50,16 @@ Akan menghasilkan respon (respon berbentuk JSON)
 ### POSTED (melunaskan data tagihan)
 
 ```
-{{base_url}}/pajak_daerah/postesptpd/<auth_id>/
+{{base_url}}/pajak_daerah/postesptpd/{{auth_id}}/
 ```
 Menggunakan method pos dan input JSON
 
 ```json
 {
-    "user":"<username>",
-    "IDBILLING":"<idbilling>",
-    "NORESI":"<noresi>",
-    "PEMBAYARAN":<pokok+denda>
+    "user":"{{username}}",
+    "IDBILLING":"{{idbilling}}",
+    "NORESI":"{{noresi}}",
+    "PEMBAYARAN":{{pokok+denda}}
 }
 ```
 akan menghasilkan output sebagai berikut ini
