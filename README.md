@@ -67,7 +67,7 @@ Menggunakan method pos dan input JSON
     "user":"{{ username }}",
     "IDBILLING":"{{ idbilling }}",
     "NORESI":"{{ noresi }}",
-    "PEMBAYARAN":{{ Total Pembayaran (pokok + denda) }}
+    "PEMBAYARAN":"{{ Total Pembayaran (pokok + denda) }}"
 }
 ```
 akan menghasilkan output sebagai berikut ini
