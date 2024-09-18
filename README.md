@@ -47,6 +47,14 @@ Akan menghasilkan respon (respon berbentuk JSON)
     "pesan": "Tagihan sudah Lunas",
   }
   ```
+* Data tidak ditemukan
+
+  ```JSON
+  {
+    "status"="1"
+    "pesam"="Data tidak ditemukan",
+  }
+  ```
 ### POSTED (melunaskan data tagihan)
 
 ```
@@ -56,10 +64,10 @@ Menggunakan method pos dan input JSON
 
 ```json
 {
-    "user":"{{username}}",
-    "IDBILLING":"{{idbilling}}",
-    "NORESI":"{{noresi}}",
-    "PEMBAYARAN":{{pokok+denda}}
+    "user":"{{ username }}",
+    "IDBILLING":"{{ idbilling }}",
+    "NORESI":"{{ noresi }}",
+    "PEMBAYARAN":{{ Total Pembayaran (pokok + denda) }}
 }
 ```
 akan menghasilkan output sebagai berikut ini
