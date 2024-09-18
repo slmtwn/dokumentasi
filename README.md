@@ -34,7 +34,7 @@ Akan menghasilkan respon (respon berbentuk JSON)
     "pesan": "Sukses",
     "data": [
         {
-            "{{ data tagihan}}"
+            "{{ data tagihan }}"
         }
     ]
 }
