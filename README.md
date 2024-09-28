@@ -9,6 +9,7 @@ Pada saat ini yang sudah bekerjasama dengan Pemerintah Kab. Gunungkidul adalah:
 * [Bank BNI](https://www.bni.co.id/)
 
 ## Dokumentasi Teknis
+1. ### Pajak BPHTB dan BPJT
 ### Inquiry (mengambil data tagihan)
 
 ```
