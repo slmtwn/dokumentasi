@@ -26,6 +26,37 @@ Akan menghasilkan respon (respon berbentuk JSON)
 }
 ```
 
+* Tagihan sudah terbayar
+
+  
+```json
+{
+    "status": "2",
+    "pesan": "Tagihan sudah terbayar"
+}
+```
+
+* Tagihan terbayar dengan kelebihan pembayaran
+
+  
+```json
+{
+    "status": "2",
+    "pesan": "Tagihan sudah terbayar dengan kelebihan pembayaran"
+}
+```
+
+* Tagihan tidak ditemukan
+
+  
+```json
+{
+    "status": "1",
+    "pesan": "Data tidak ditemukan"
+}
+```
+
+
 * Id Billing Belum terbayar
 
 ```JSON
@@ -39,22 +70,7 @@ Akan menghasilkan respon (respon berbentuk JSON)
     ]
 }
 ```
-* Id Billing sudah terbayar
 
-  ```JSON
-  {
-    "status": "2",
-    "pesan": "Tagihan sudah Lunas",
-  }
-  ```
-* Data tidak ditemukan
-
-  ```JSON
-  {
-    "status": "1"
-    "pesan": "Data tidak ditemukan",
-  }
-  ```
 ### POSTED (melunaskan data tagihan)
 
 ```
@@ -80,6 +96,16 @@ akan menghasilkan output sebagai berikut ini
     "pesan": "Kode Keamanan salah"
 }
 ```
+
+* Pembayaran Kurang
+  
+```json
+{
+    "status": "1",
+    "pesan": "Pembayaran kurang"
+}
+```
+
 * Pembayaran berhasil
 ```json
 {
